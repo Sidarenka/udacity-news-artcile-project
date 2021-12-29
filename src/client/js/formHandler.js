@@ -4,7 +4,7 @@ function handleSubmit(event) {
     // check what text was put into the form field
     let formUrl = document.getElementById('name').value
     const errorMessage = document.getElementById('errorMessage')
-    if (Client.checkUrl(formUrl)) {
+    if (Client.urlChecker(formUrl)) {
         fetch("http://localhost:8080/article", {
             method: "POST",
             cache: "no-cache",
@@ -30,7 +30,7 @@ function handleSubmit(event) {
 async function updateUI(res) {
     // GET function that takes the info from the server
     document.querySelector('#result_output').innerText = 'Confidence = ' + res.confidence + '%';
-    document.querySelector('#subjectivity_output').innerText = res.subjectivity;
+    document.querySelector('#subjectivity_output').innerText = 'Subjectivity: ' + res.subjectivity.charAt(0) + res.subjectivity.slice(1).toLowerCase();
     document.querySelector('#score_output').innerText = `Polarity score: ${score(
         res.score_tag
       )}`
