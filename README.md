@@ -40,3 +40,8 @@ The app will run on `localhost:8080`
 The app makes a call to the API on form submission. 
 The API keys stored on the server side are used to handle the response.
 The results show up in the view, as well as they are logged to the console.
+
+## Unit Testing using Jest Framework
+
+The project has Jest installed. Every src/client/js file has one test to validate implemeted functionality. 
+To run Jest execute `npm run test`.
