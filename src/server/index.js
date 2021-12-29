@@ -1,7 +1,7 @@
 const dotenv = require('dotenv')
 var path = require('path')
 const express = require('express')
-const bodyParser = require('bodyParser')
+const bodyParser = require('body-parser')
 const cors = require('cors')
 const fetch = require('node-fetch')
 
