@@ -5,7 +5,7 @@ function handleSubmit(event) {
     let formUrl = document.getElementById('name').value
     const errorMessage = document.getElementById('errorMessage')
     if (Client.urlChecker(formUrl)) {
-        fetch("http://localhost:8080/article", {
+        fetch("http://localhost:8081/article", {
             method: "POST",
             cache: "no-cache",
             credentials: "same-origin",
